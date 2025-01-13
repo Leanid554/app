@@ -7,7 +7,7 @@ const NavBar = ({ onPressHome, onPressSettings, profileImage }) => {
       <TouchableOpacity>
         <Image
           source={require("../assets/menu.png")}
-          style={[styles.iconMenu]} // Добавлено вращение
+          style={[styles.iconMenu]}
         />
       </TouchableOpacity>
 
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     height: 60,
-    paddingHorizontal: 20,
-    justifyContent: "space-between", // Элементы с двух сторон
+
+    justifyContent: "space-between",
   },
   rightIcons: {
     flexDirection: "row",
