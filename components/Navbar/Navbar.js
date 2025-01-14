@@ -6,7 +6,7 @@ const NavBar = ({ onPressHome, onPressSettings, profileImage }) => {
     <View style={styles.navBar}>
       <TouchableOpacity>
         <Image
-          source={require("../assets/menu.png")}
+          source={require("../../assets/menu.png")}
           style={[styles.iconMenu]}
         />
       </TouchableOpacity>
@@ -18,12 +18,12 @@ const NavBar = ({ onPressHome, onPressSettings, profileImage }) => {
         >
           <Image
             style={styles.iconmes}
-            source={require("../assets/iconMes.png")}
+            source={require("../../assets/iconMes.png")}
           />
         </TouchableOpacity>
         <TouchableOpacity onPress={onPressHome}>
           <Image
-            source={require("../assets/default-profile.png")}
+            source={require("../../assets/default-profile.png")}
             style={styles.icon}
           />
         </TouchableOpacity>

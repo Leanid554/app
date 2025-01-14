@@ -5,8 +5,9 @@ import Balance from "./Balance";
 const Main = () => {
   return (
     <View style={styles.main}>
-      <Text style={styles.title1}>Total Balance</Text>
       <Text style={styles.title}>Credit Card</Text>
+      <Text style={styles.title1}>Total Balance</Text>
+
       <Balance />
       <Text style={styles.title2}>
         <Text style={styles.amount}>40 540.74</Text>
@@ -53,7 +54,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     color: "#8B8B8B",
-    textAlign: "center",
   },
   title1: {
     fontSize: 48,

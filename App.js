@@ -1,31 +1,36 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native"; // Исправлено, чтобы использовать SafeAreaView из react-native
-import NavBar from "./components/Navbar";
+import { StyleSheet, SafeAreaView, ScrollView, View } from "react-native";
+import NavBar from "./components/Navbar/Navbar";
 import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <StatusBar />
+      <StatusBar />
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.scrollContent}
+      >
         <NavBar />
         <Main />
-      </View>
+        <Footer />
+      </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 40,
     flex: 1,
     backgroundColor: "#cdf2e5",
   },
-  content: {
+  scrollView: {
+    flex: 1, // Обеспечивает, что ScrollView занимает всю доступную высоту
+  },
+  scrollContent: {
+    flexGrow: 1, // Обеспечивает, что содержимое ScrollView растягивается
     paddingHorizontal: 20,
-    flex: 1,
-  },
-  statusbar: {
-    backgroundColor: "#cdf2e5",
+    paddingBottom: 20, // Добавляем отступ внизу, чтобы было удобно прокручивать
   },
 });
